@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH -J mergertree           # Job name
+#SBATCH -o myjob.oNUMBER       # Name of stdout output file
+#SBATCH -e myjob.eNUMBER       # Name of stderr error file
+#SBATCH -p skx        # Queue (partition) name
+#SBATCH -N 1               # Total # of nodes
+#SBATCH -n 1              # Total # of mpi tasks
+#SBATCH -t 1:00:00        # Run time (hh:mm:ss)
+#SBATCH --mail-user=mts2188@columbia.edu
+#SBATCH --mail-type=NONE    # Send email at begin and end of job
+#SBATCH -A TG-AST140041
+
+# Other commands must follow all #SBATCH directives...
+
+#module load gcc
+module load gcc
+module load gsl
+module list
+pwd
+date
+
+#Set thread count (default value is 1)...
+
+#export OMP_NUM_THREADS=48
+
+
+# Launch OpenMP code...
+#stdbuf -o0 ./mergertree catalog.txt 1 1 > output.txt
+../mergertree catalogNUMBER.txt 0 NUMBER > outputNUMBER.txt

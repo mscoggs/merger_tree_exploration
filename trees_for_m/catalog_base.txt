@@ -1,0 +1,6 @@
+200
+../Snapshot_alist_mod
+./blank
+trees/batch_N
+100
+mass 0 0
