@@ -1,0 +1,6 @@
+200
+./Snapshot_alist_mod
+./not_exist
+/scratch/08288/tg875874/trees/tree_NUM
+1
+  9e+11         0           0
